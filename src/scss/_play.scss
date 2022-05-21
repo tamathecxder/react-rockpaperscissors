@@ -1,0 +1,36 @@
+.play {
+  width: 100%;
+
+  position: relative;
+  margin-top: 50px;
+  
+  display: flex;
+  flex-direction: column;
+
+  .triangle {
+    position: absolute;
+    align-self: center;
+    margin-top: 70px;
+  }
+
+  .items {
+    display: flex;
+    justify-content: center;
+
+    .icon {
+      height: 160px;
+      border: 1rem solid;
+      border-radius: 50%;
+      width: 160px;
+
+      &--paper {
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-color: $paper-gradient;
+        background-image: url($imageP);
+        transform: translateX(1.5rem);
+      }
+    }
+  }
+}
