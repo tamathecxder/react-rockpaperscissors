@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Game = ({ myChoice, score, setScore }) => {
   const [computer, setComputer] = useState("");
   const [playerWin, setPlayerWin] = useState("");
+  const [counter, setCounter] = useState(3);
 
   const choices = ["rock", "paper", "scissors"];
   const newComputerPick = () => {
@@ -39,8 +40,14 @@ const Game = ({ myChoice, score, setScore }) => {
   }
 
   useEffect(() => {
-    Result();
-  }, [computer]);
+    const timer = counter > 0 ? setInterval(() => {
+      setCounter(counter - 1)
+    }, 1000) : Result();
+
+    return () => {
+      clearInterval(timer);
+    }
+  }, [counter, computer]);
 
   return (
     <div className='game'>
@@ -81,7 +88,14 @@ const Game = ({ myChoice, score, setScore }) => {
 
       <div className="game__computer">
         <span className="text">The Computer Picked</span>
-        <div className={`icon icon--${computer} ${playerWin == 'lose' ? `icon icon--${computer}--winner` : ``}`}></div>
+        {
+          counter == 0 ? 
+          (
+            <div className={`icon icon--${computer} ${playerWin == 'lose' ? `icon icon--${computer}--winner` : ""}`}></div> 
+          ) : (
+            <div className="counter">{counter}</div>
+          )
+        }
       </div>
     </div>
   )

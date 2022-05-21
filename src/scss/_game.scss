@@ -17,7 +17,7 @@
 
     .icon {
       height: 250px;
-      width: 250px;      
+      width: 250px;
       border-radius: 50%;
       border-color: transparent;
       border: 25px solid;
@@ -38,7 +38,7 @@
           @include stackBoxShadow($rock-gradient);
         }
       }
-      
+
       &--scissors {
         @include icon($imageS, $scissors-gradient);
 
@@ -60,9 +60,21 @@
       margin-bottom: 2.5rem;
     }
 
+    .counter {
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      background-color: rgba($color: #000000, $alpha: .3);
+      font-size: 8rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .icon {
       height: 250px;
-      width: 250px;      
+      width: 250px;
       border-radius: 50%;
       border-color: transparent;
       border: 25px solid;
@@ -123,5 +135,5 @@
     }
   }
 
-  
+
 }
