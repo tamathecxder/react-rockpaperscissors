@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Triangle from '../images/bg-triangle.svg'
 
 const Play = ({setMyChoice}) => {
   // method ketika kita mengklik salah satu pilihan dan juga menset data apa yang telah kita pilih
@@ -9,15 +10,20 @@ const Play = ({setMyChoice}) => {
 
   return (
     <div className='play'>
-      <Link to="/game">
-        <div data-id="paper" onClick={setChoice} className="icon icon--paper">Paper</div>
-      </Link>
-      <Link to="/game">
-        <div data-id="rock" onClick={setChoice} className="icon icon--rock">Rock</div>
-      </Link>
-      <Link to="/game">
-        <div data-id="scissors" onClick={setChoice} className="icon icon--scissors">Scissors</div>
-      </Link>
+      <div className="triangle">
+        <img src={Triangle} alt="triange" />
+      </div>
+      <div className="items">
+        <Link to="/game">
+          <div data-id="paper" onClick={setChoice} className="icon icon--paper">Paper</div>
+        </Link>
+        <Link to="/game">
+          <div data-id="rock" onClick={setChoice} className="icon icon--rock">Rock</div>
+        </Link>
+        <Link to="/game">
+          <div data-id="scissors" onClick={setChoice} className="icon icon--scissors">Scissors</div>
+        </Link>
+      </div>
     </div>
   )
 }
