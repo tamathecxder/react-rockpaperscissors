@@ -51,8 +51,8 @@ const Game = ({ myChoice, score, setScore }) => {
 
       {
         playerWin == "win" &&
-        <div className="result__play">
-          <span className="text">You Win</span>
+        <div className="game__play">
+          <span className="result-text">You Win!</span>
           <Link to="/" className='play-again' onClick={() => setComputer()}>
             Play Again
           </Link>
@@ -61,8 +61,8 @@ const Game = ({ myChoice, score, setScore }) => {
 
       {
         playerWin == "lose" &&
-        <div className="result__play">
-          <span className="text">You Lose</span>
+        <div className="game__play">
+          <span className="result-text">You Lose</span>
           <Link to="/" className='play-again' onClick={() => setComputer()}>
             Play Again
           </Link>
@@ -71,8 +71,8 @@ const Game = ({ myChoice, score, setScore }) => {
 
       {
         playerWin == "draw" &&
-        <div className="result__play">
-          <span className="text">Draw!</span>
+        <div className="game__play">
+          <span className="result-text">Draw!</span>
           <Link to="/" className='play-again' onClick={() => setComputer()}>
             Play Again
           </Link>
