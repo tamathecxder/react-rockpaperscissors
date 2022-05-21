@@ -1,0 +1,27 @@
+.footer {
+  width: 100vw;
+
+  .attribution {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 1rem;
+  }
+
+  button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 8px 26px;
+    border-radius: .4rem;
+    border: 3px solid $header-outline;
+    color: lighten($header-outline, 20%);
+    background: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
