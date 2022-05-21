@@ -21,6 +21,8 @@
     letter-spacing: 2px;
 
     &:hover {
+      background-color: rgba($color: #ffffff, $alpha: .8);
+      color: $dark-text;
       cursor: pointer;
     }
   }
