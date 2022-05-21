@@ -1,0 +1,7 @@
+@mixin icon($img, $borderColor) {
+  background-color: #fff;
+  background-image: url($img);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: $borderColor;
+}
