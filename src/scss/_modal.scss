@@ -1,0 +1,44 @@
+.modal-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+
+  .modal-box {
+    color: $dark-text;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+
+    img {
+      width: 100%;
+    }
+
+    .modal__header {
+      display: flex;
+      justify-content: space-between;
+      
+      h1 {
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    align-self: center;
+    color: $dark-text;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+}
