@@ -46,7 +46,7 @@ const Game = ({ myChoice, score, setScore }) => {
     <div className='game'>
       <div className="game__yourself">
         <span className="text">You Picked</span>
-        <div className={`icon icon--${myChoice}`}></div>
+        <div className={`icon icon--${myChoice} ${playerWin == "win" ? `icon icon--${myChoice}--winner` : ``}`}></div>
       </div>
 
       {
@@ -81,7 +81,7 @@ const Game = ({ myChoice, score, setScore }) => {
 
       <div className="game__computer">
         <span className="text">The Computer Picked</span>
-        <div className={`icon icon--${computer}`}></div>
+        <div className={`icon icon--${computer} ${playerWin == 'lose' ? `icon icon--${computer}--winner` : ``}`}></div>
       </div>
     </div>
   )

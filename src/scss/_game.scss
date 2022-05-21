@@ -25,12 +25,26 @@
 
       &--paper {
         @include icon($imageP, $paper-gradient);
+
+        &--winner {
+          @include stackBoxShadow($paper-gradient);
+        }
       }
+
       &--rock {
         @include icon($imageR, $rock-gradient);
+
+        &--winner {
+          @include stackBoxShadow($rock-gradient);
+        }
       }
+      
       &--scissors {
         @include icon($imageS, $scissors-gradient);
+
+        &--winner {
+          @include stackBoxShadow($scissors-gradient);
+        }
       }
     }
   }
@@ -56,12 +70,26 @@
 
       &--paper {
         @include icon($imageP, $paper-gradient);
+
+        &--winner {
+          @include stackBoxShadow($paper-gradient);
+        }
       }
+
       &--rock {
         @include icon($imageR, $rock-gradient);
+
+        &--winner {
+          @include stackBoxShadow($rock-gradient);
+        }
       }
+
       &--scissors {
         @include icon($imageS, $scissors-gradient);
+
+        &--winner {
+          @include stackBoxShadow($scissors-gradient);
+        }
       }
     }
   }
