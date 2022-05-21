@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Play = (setMyChoice) => {
+const Play = ({setMyChoice}) => {
   // method ketika kita mengklik salah satu pilihan dan juga menset data apa yang telah kita pilih
   const setChoice = (e) => {
     setMyChoice(e.target.dataset.id);
